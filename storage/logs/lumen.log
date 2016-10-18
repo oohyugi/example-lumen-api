@@ -1,0 +1,344 @@
+[2016-10-18 04:41:30] lumen.ERROR: exception 'PDOException' with message 'could not find driver' in /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/Connector.php:55
+Stack trace:
+#0 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/Connector.php(55): PDO->__construct('mysql:host=loca...', 'root', 'alphaomega*9', Array)
+#1 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#2 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/ConnectionFactory.php(61): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#3 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#4 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(924): call_user_func(Object(Closure))
+#5 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(792): Illuminate\Database\Connection->getPdo()
+#6 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(677): Illuminate\Database\Connection->reconnectIfMissingConnection()
+#7 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(349): Illuminate\Database\Connection->run('select * from i...', Array, Object(Closure))
+#8 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Schema/MySqlBuilder.php(21): Illuminate\Database\Connection->select('select * from i...', Array)
+#9 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Migrations/DatabaseMigrationRepository.php(141): Illuminate\Database\Schema\MySqlBuilder->hasTable('migrations')
+#10 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Migrations/Migrator.php(404): Illuminate\Database\Migrations\DatabaseMigrationRepository->repositoryExists()
+#11 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Console/Migrations/MigrateCommand.php(103): Illuminate\Database\Migrations\Migrator->repositoryExists()
+#12 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Console/Migrations/MigrateCommand.php(58): Illuminate\Database\Console\Migrations\MigrateCommand->prepareDatabase()
+#13 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#14 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/container/Container.php(507): call_user_func_array(Array, Array)
+#15 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/console/Command.php(169): Illuminate\Container\Container->call(Array)
+#16 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /opt/lampp/htdocs/lumen-web-api/vendor/laravel/lumen-framework/src/Console/Kernel.php(76): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /opt/lampp/htdocs/lumen-web-api/artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 {main}  
+[2016-10-18 04:41:53] lumen.ERROR: exception 'PDOException' with message 'could not find driver' in /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/Connector.php:55
+Stack trace:
+#0 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/Connector.php(55): PDO->__construct('mysql:host=loca...', 'root', 'alphaomega*9', Array)
+#1 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#2 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/ConnectionFactory.php(61): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#3 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#4 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(924): call_user_func(Object(Closure))
+#5 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(792): Illuminate\Database\Connection->getPdo()
+#6 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(677): Illuminate\Database\Connection->reconnectIfMissingConnection()
+#7 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(349): Illuminate\Database\Connection->run('select * from i...', Array, Object(Closure))
+#8 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Schema/MySqlBuilder.php(21): Illuminate\Database\Connection->select('select * from i...', Array)
+#9 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Migrations/DatabaseMigrationRepository.php(141): Illuminate\Database\Schema\MySqlBuilder->hasTable('migrations')
+#10 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Migrations/Migrator.php(404): Illuminate\Database\Migrations\DatabaseMigrationRepository->repositoryExists()
+#11 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Console/Migrations/MigrateCommand.php(103): Illuminate\Database\Migrations\Migrator->repositoryExists()
+#12 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Console/Migrations/MigrateCommand.php(58): Illuminate\Database\Console\Migrations\MigrateCommand->prepareDatabase()
+#13 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#14 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/container/Container.php(507): call_user_func_array(Array, Array)
+#15 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/console/Command.php(169): Illuminate\Container\Container->call(Array)
+#16 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /opt/lampp/htdocs/lumen-web-api/vendor/laravel/lumen-framework/src/Console/Kernel.php(76): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /opt/lampp/htdocs/lumen-web-api/artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 {main}  
+[2016-10-18 04:42:17] lumen.ERROR: exception 'PDOException' with message 'could not find driver' in /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/Connector.php:55
+Stack trace:
+#0 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/Connector.php(55): PDO->__construct('mysql:host=loca...', 'root', 'alphaomega*9', Array)
+#1 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#2 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/ConnectionFactory.php(61): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#3 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#4 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(924): call_user_func(Object(Closure))
+#5 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(792): Illuminate\Database\Connection->getPdo()
+#6 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(677): Illuminate\Database\Connection->reconnectIfMissingConnection()
+#7 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(349): Illuminate\Database\Connection->run('select * from i...', Array, Object(Closure))
+#8 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Schema/MySqlBuilder.php(21): Illuminate\Database\Connection->select('select * from i...', Array)
+#9 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Migrations/DatabaseMigrationRepository.php(141): Illuminate\Database\Schema\MySqlBuilder->hasTable('migrations')
+#10 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Migrations/Migrator.php(404): Illuminate\Database\Migrations\DatabaseMigrationRepository->repositoryExists()
+#11 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Console/Migrations/MigrateCommand.php(103): Illuminate\Database\Migrations\Migrator->repositoryExists()
+#12 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Console/Migrations/MigrateCommand.php(58): Illuminate\Database\Console\Migrations\MigrateCommand->prepareDatabase()
+#13 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#14 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/container/Container.php(507): call_user_func_array(Array, Array)
+#15 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/console/Command.php(169): Illuminate\Container\Container->call(Array)
+#16 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /opt/lampp/htdocs/lumen-web-api/vendor/laravel/lumen-framework/src/Console/Kernel.php(76): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /opt/lampp/htdocs/lumen-web-api/artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 {main}  
+[2016-10-18 04:42:40] lumen.ERROR: exception 'PDOException' with message 'could not find driver' in /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/Connector.php:55
+Stack trace:
+#0 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/Connector.php(55): PDO->__construct('mysql:host=loca...', 'root', 'alphaomega*9', Array)
+#1 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#2 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/ConnectionFactory.php(61): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#3 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#4 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(924): call_user_func(Object(Closure))
+#5 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(792): Illuminate\Database\Connection->getPdo()
+#6 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(677): Illuminate\Database\Connection->reconnectIfMissingConnection()
+#7 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(349): Illuminate\Database\Connection->run('select * from i...', Array, Object(Closure))
+#8 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Schema/MySqlBuilder.php(21): Illuminate\Database\Connection->select('select * from i...', Array)
+#9 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Migrations/DatabaseMigrationRepository.php(141): Illuminate\Database\Schema\MySqlBuilder->hasTable('migrations')
+#10 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Migrations/Migrator.php(404): Illuminate\Database\Migrations\DatabaseMigrationRepository->repositoryExists()
+#11 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Console/Migrations/MigrateCommand.php(103): Illuminate\Database\Migrations\Migrator->repositoryExists()
+#12 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Console/Migrations/MigrateCommand.php(58): Illuminate\Database\Console\Migrations\MigrateCommand->prepareDatabase()
+#13 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#14 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/container/Container.php(507): call_user_func_array(Array, Array)
+#15 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/console/Command.php(169): Illuminate\Container\Container->call(Array)
+#16 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /opt/lampp/htdocs/lumen-web-api/vendor/laravel/lumen-framework/src/Console/Kernel.php(76): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /opt/lampp/htdocs/lumen-web-api/artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 {main}  
+[2016-10-18 04:44:44] lumen.ERROR: exception 'PDOException' with message 'could not find driver' in /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/Connector.php:55
+Stack trace:
+#0 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/Connector.php(55): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#2 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/ConnectionFactory.php(61): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#3 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#4 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(924): call_user_func(Object(Closure))
+#5 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(792): Illuminate\Database\Connection->getPdo()
+#6 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(677): Illuminate\Database\Connection->reconnectIfMissingConnection()
+#7 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(349): Illuminate\Database\Connection->run('select * from i...', Array, Object(Closure))
+#8 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Schema/MySqlBuilder.php(21): Illuminate\Database\Connection->select('select * from i...', Array)
+#9 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Migrations/DatabaseMigrationRepository.php(141): Illuminate\Database\Schema\MySqlBuilder->hasTable('migrations')
+#10 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Migrations/Migrator.php(404): Illuminate\Database\Migrations\DatabaseMigrationRepository->repositoryExists()
+#11 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Console/Migrations/MigrateCommand.php(103): Illuminate\Database\Migrations\Migrator->repositoryExists()
+#12 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Console/Migrations/MigrateCommand.php(58): Illuminate\Database\Console\Migrations\MigrateCommand->prepareDatabase()
+#13 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#14 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/container/Container.php(507): call_user_func_array(Array, Array)
+#15 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/console/Command.php(169): Illuminate\Container\Container->call(Array)
+#16 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /opt/lampp/htdocs/lumen-web-api/vendor/laravel/lumen-framework/src/Console/Kernel.php(76): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /opt/lampp/htdocs/lumen-web-api/artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 {main}  
+[2016-10-18 04:46:21] lumen.ERROR: exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)' in /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/Connector.php:55
+Stack trace:
+#0 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/Connector.php(55): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#2 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/ConnectionFactory.php(61): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#3 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#4 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(924): call_user_func(Object(Closure))
+#5 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(792): Illuminate\Database\Connection->getPdo()
+#6 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(677): Illuminate\Database\Connection->reconnectIfMissingConnection()
+#7 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(349): Illuminate\Database\Connection->run('select * from i...', Array, Object(Closure))
+#8 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Schema/MySqlBuilder.php(21): Illuminate\Database\Connection->select('select * from i...', Array)
+#9 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Migrations/DatabaseMigrationRepository.php(141): Illuminate\Database\Schema\MySqlBuilder->hasTable('migrations')
+#10 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Migrations/Migrator.php(404): Illuminate\Database\Migrations\DatabaseMigrationRepository->repositoryExists()
+#11 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Console/Migrations/MigrateCommand.php(103): Illuminate\Database\Migrations\Migrator->repositoryExists()
+#12 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Console/Migrations/MigrateCommand.php(58): Illuminate\Database\Console\Migrations\MigrateCommand->prepareDatabase()
+#13 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#14 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/container/Container.php(507): call_user_func_array(Array, Array)
+#15 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/console/Command.php(169): Illuminate\Container\Container->call(Array)
+#16 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /opt/lampp/htdocs/lumen-web-api/vendor/laravel/lumen-framework/src/Console/Kernel.php(76): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /opt/lampp/htdocs/lumen-web-api/artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 {main}  
+[2016-10-18 04:46:52] lumen.ERROR: exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)' in /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/Connector.php:55
+Stack trace:
+#0 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/Connector.php(55): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#2 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/ConnectionFactory.php(61): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#3 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#4 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(924): call_user_func(Object(Closure))
+#5 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(792): Illuminate\Database\Connection->getPdo()
+#6 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(677): Illuminate\Database\Connection->reconnectIfMissingConnection()
+#7 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(349): Illuminate\Database\Connection->run('select * from i...', Array, Object(Closure))
+#8 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Schema/MySqlBuilder.php(21): Illuminate\Database\Connection->select('select * from i...', Array)
+#9 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Migrations/DatabaseMigrationRepository.php(141): Illuminate\Database\Schema\MySqlBuilder->hasTable('migrations')
+#10 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Migrations/Migrator.php(404): Illuminate\Database\Migrations\DatabaseMigrationRepository->repositoryExists()
+#11 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Console/Migrations/MigrateCommand.php(103): Illuminate\Database\Migrations\Migrator->repositoryExists()
+#12 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Console/Migrations/MigrateCommand.php(58): Illuminate\Database\Console\Migrations\MigrateCommand->prepareDatabase()
+#13 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#14 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/container/Container.php(507): call_user_func_array(Array, Array)
+#15 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/console/Command.php(169): Illuminate\Container\Container->call(Array)
+#16 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /opt/lampp/htdocs/lumen-web-api/vendor/laravel/lumen-framework/src/Console/Kernel.php(76): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /opt/lampp/htdocs/lumen-web-api/artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 {main}  
+[2016-10-18 04:47:44] lumen.ERROR: exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)' in /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/Connector.php:55
+Stack trace:
+#0 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/Connector.php(55): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#2 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/ConnectionFactory.php(61): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#3 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#4 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(924): call_user_func(Object(Closure))
+#5 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(792): Illuminate\Database\Connection->getPdo()
+#6 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(677): Illuminate\Database\Connection->reconnectIfMissingConnection()
+#7 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(349): Illuminate\Database\Connection->run('select * from i...', Array, Object(Closure))
+#8 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Schema/MySqlBuilder.php(21): Illuminate\Database\Connection->select('select * from i...', Array)
+#9 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Migrations/DatabaseMigrationRepository.php(141): Illuminate\Database\Schema\MySqlBuilder->hasTable('migrations')
+#10 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Migrations/Migrator.php(404): Illuminate\Database\Migrations\DatabaseMigrationRepository->repositoryExists()
+#11 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Console/Migrations/MigrateCommand.php(103): Illuminate\Database\Migrations\Migrator->repositoryExists()
+#12 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Console/Migrations/MigrateCommand.php(58): Illuminate\Database\Console\Migrations\MigrateCommand->prepareDatabase()
+#13 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#14 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/container/Container.php(507): call_user_func_array(Array, Array)
+#15 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/console/Command.php(169): Illuminate\Container\Container->call(Array)
+#16 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /opt/lampp/htdocs/lumen-web-api/vendor/laravel/lumen-framework/src/Console/Kernel.php(76): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /opt/lampp/htdocs/lumen-web-api/artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 {main}  
+[2016-10-18 04:47:51] lumen.ERROR: exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)' in /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/Connector.php:55
+Stack trace:
+#0 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/Connector.php(55): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#2 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/ConnectionFactory.php(61): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#3 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#4 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(924): call_user_func(Object(Closure))
+#5 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(792): Illuminate\Database\Connection->getPdo()
+#6 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(677): Illuminate\Database\Connection->reconnectIfMissingConnection()
+#7 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(349): Illuminate\Database\Connection->run('select * from i...', Array, Object(Closure))
+#8 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Schema/MySqlBuilder.php(21): Illuminate\Database\Connection->select('select * from i...', Array)
+#9 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Migrations/DatabaseMigrationRepository.php(141): Illuminate\Database\Schema\MySqlBuilder->hasTable('migrations')
+#10 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Migrations/Migrator.php(404): Illuminate\Database\Migrations\DatabaseMigrationRepository->repositoryExists()
+#11 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Console/Migrations/MigrateCommand.php(103): Illuminate\Database\Migrations\Migrator->repositoryExists()
+#12 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Console/Migrations/MigrateCommand.php(58): Illuminate\Database\Console\Migrations\MigrateCommand->prepareDatabase()
+#13 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#14 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/container/Container.php(507): call_user_func_array(Array, Array)
+#15 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/console/Command.php(169): Illuminate\Container\Container->call(Array)
+#16 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /opt/lampp/htdocs/lumen-web-api/vendor/laravel/lumen-framework/src/Console/Kernel.php(76): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /opt/lampp/htdocs/lumen-web-api/artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 {main}  
+[2016-10-18 04:51:30] lumen.ERROR: exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)' in /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/Connector.php:55
+Stack trace:
+#0 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/Connector.php(55): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#2 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connectors/ConnectionFactory.php(61): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#3 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#4 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(924): call_user_func(Object(Closure))
+#5 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(792): Illuminate\Database\Connection->getPdo()
+#6 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(677): Illuminate\Database\Connection->reconnectIfMissingConnection()
+#7 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Connection.php(349): Illuminate\Database\Connection->run('select * from i...', Array, Object(Closure))
+#8 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Schema/MySqlBuilder.php(21): Illuminate\Database\Connection->select('select * from i...', Array)
+#9 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Migrations/DatabaseMigrationRepository.php(141): Illuminate\Database\Schema\MySqlBuilder->hasTable('migrations')
+#10 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Migrations/Migrator.php(404): Illuminate\Database\Migrations\DatabaseMigrationRepository->repositoryExists()
+#11 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Console/Migrations/MigrateCommand.php(103): Illuminate\Database\Migrations\Migrator->repositoryExists()
+#12 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/database/Console/Migrations/MigrateCommand.php(58): Illuminate\Database\Console\Migrations\MigrateCommand->prepareDatabase()
+#13 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#14 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/container/Container.php(507): call_user_func_array(Array, Array)
+#15 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/console/Command.php(169): Illuminate\Container\Container->call(Array)
+#16 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /opt/lampp/htdocs/lumen-web-api/vendor/laravel/lumen-framework/src/Console/Kernel.php(76): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /opt/lampp/htdocs/lumen-web-api/artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 {main}  
+[2016-10-18 04:56:47] lumen.ERROR: exception 'Symfony\Component\Console\Exception\CommandNotFoundException' with message 'Command "make:model" is not defined.
+
+Did you mean this?
+    make:migration' in /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php:515
+Stack trace:
+#0 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(183): Symfony\Component\Console\Application->find('make:model')
+#1 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /opt/lampp/htdocs/lumen-web-api/vendor/laravel/lumen-framework/src/Console/Kernel.php(76): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /opt/lampp/htdocs/lumen-web-api/artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2016-10-18 04:57:07] lumen.ERROR: exception 'Symfony\Component\Console\Exception\CommandNotFoundException' with message 'Command "make:model" is not defined.
+
+Did you mean this?
+    make:migration' in /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php:515
+Stack trace:
+#0 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(183): Symfony\Component\Console\Application->find('make:model')
+#1 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /opt/lampp/htdocs/lumen-web-api/vendor/laravel/lumen-framework/src/Console/Kernel.php(76): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /opt/lampp/htdocs/lumen-web-api/artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2016-10-18 04:57:48] lumen.ERROR: exception 'Symfony\Component\Console\Exception\CommandNotFoundException' with message 'Command "make:model" is not defined.
+
+Did you mean this?
+    make:migration' in /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php:515
+Stack trace:
+#0 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(183): Symfony\Component\Console\Application->find('make:model')
+#1 /opt/lampp/htdocs/lumen-web-api/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /opt/lampp/htdocs/lumen-web-api/vendor/laravel/lumen-framework/src/Console/Kernel.php(76): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /opt/lampp/htdocs/lumen-web-api/artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2016-10-18 05:40:59] lumen.ERROR: exception 'BadMethodCallException' with message 'Method hash does not exist.' in /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/support/Traits/Macroable.php:74
+Stack trace:
+#0 /opt/lampp/htdocs/lumen-web-api/app/Http/Middleware/Authenticate.php(41): Illuminate\Http\Request->__call('hash', Array)
+#1 /opt/lampp/htdocs/lumen-web-api/app/Http/Middleware/Authenticate.php(41): Illuminate\Http\Request->hash('api_token')
+#2 [internal function]: App\Http\Middleware\Authenticate->handle(Object(Illuminate\Http\Request), Object(Closure))
+#3 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/pipeline/Pipeline.php(136): call_user_func_array(Array, Array)
+#4 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#5 /opt/lampp/htdocs/lumen-web-api/vendor/laravel/lumen-framework/src/Routing/Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#6 [internal function]: Laravel\Lumen\Routing\Pipeline->Laravel\Lumen\Routing\{closure}(Object(Illuminate\Http\Request))
+#7 /opt/lampp/htdocs/lumen-web-api/vendor/illuminate/pipeline/Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#8 /opt/lampp/htdocs/lumen-web-api/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(640): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#9 /opt/lampp/htdocs/lumen-web-api/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(492): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#10 /opt/lampp/htdocs/lumen-web-api/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(466): Laravel\Lumen\Application->handleFoundRoute(Array)
+#11 /opt/lampp/htdocs/lumen-web-api/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(398): Laravel\Lumen\Application->handleDispatcherResponse(Array)
+#12 /opt/lampp/htdocs/lumen-web-api/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(643): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#13 /opt/lampp/htdocs/lumen-web-api/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(399): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#14 /opt/lampp/htdocs/lumen-web-api/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(340): Laravel\Lumen\Application->dispatch(NULL)
+#15 /opt/lampp/htdocs/lumen-web-api/public/index.php(28): Laravel\Lumen\Application->run()
+#16 {main}  
+[2016-10-18 05:44:27] lumen.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Http\Middleware\User' not found' in /opt/lampp/htdocs/lumen-web-api/app/Http/Middleware/Authenticate.php:43
+Stack trace:
+#0 /opt/lampp/htdocs/lumen-web-api/vendor/laravel/lumen-framework/src/Concerns/RegistersExceptionHandlers.php(55): Laravel\Lumen\Application->handleShutdown()
+#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#2 {main}  
+[2016-10-18 05:45:13] lumen.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Http\Middleware\User' not found' in /opt/lampp/htdocs/lumen-web-api/app/Http/Middleware/Authenticate.php:43
+Stack trace:
+#0 /opt/lampp/htdocs/lumen-web-api/vendor/laravel/lumen-framework/src/Concerns/RegistersExceptionHandlers.php(55): Laravel\Lumen\Application->handleShutdown()
+#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#2 {main}  
+[2016-10-18 05:46:16] lumen.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '=>' (T_DOUBLE_ARROW)' in /opt/lampp/htdocs/lumen-web-api/app/Http/Middleware/Authenticate.php:43
+Stack trace:
+#0 /opt/lampp/htdocs/lumen-web-api/vendor/laravel/lumen-framework/src/Concerns/RegistersExceptionHandlers.php(55): Laravel\Lumen\Application->handleShutdown()
+#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#2 {main}  
+[2016-10-18 05:46:52] lumen.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Http\Middleware\User' not found' in /opt/lampp/htdocs/lumen-web-api/app/Http/Middleware/Authenticate.php:43
+Stack trace:
+#0 /opt/lampp/htdocs/lumen-web-api/vendor/laravel/lumen-framework/src/Concerns/RegistersExceptionHandlers.php(55): Laravel\Lumen\Application->handleShutdown()
+#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#2 {main}  
+[2016-10-18 07:58:24] lumen.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '}'' in /opt/lampp/htdocs/lumen-web-api/app/Http/Controllers/CategoryAdsController.php:23
+Stack trace:
+#0 /opt/lampp/htdocs/lumen-web-api/vendor/laravel/lumen-framework/src/Concerns/RegistersExceptionHandlers.php(55): Laravel\Lumen\Application->handleShutdown()
+#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#2 {main}  
+[2016-10-18 08:02:54] lumen.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']'' in /opt/lampp/htdocs/lumen-web-api/app/Http/Controllers/CategoryAdsController.php:19
+Stack trace:
+#0 /opt/lampp/htdocs/lumen-web-api/vendor/laravel/lumen-framework/src/Concerns/RegistersExceptionHandlers.php(55): Laravel\Lumen\Application->handleShutdown()
+#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#2 {main}  
+[2016-10-18 08:07:56] lumen.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '}'' in /opt/lampp/htdocs/lumen-web-api/app/Http/Controllers/CategoryAdsController.php:23
+Stack trace:
+#0 /opt/lampp/htdocs/lumen-web-api/vendor/laravel/lumen-framework/src/Concerns/RegistersExceptionHandlers.php(55): Laravel\Lumen\Application->handleShutdown()
+#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#2 {main}  
